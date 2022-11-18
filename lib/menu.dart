@@ -4,6 +4,7 @@ import 'package:ejercicio/sesion4/inicio4.dart';
 import 'package:ejercicio/sesion5/inicio5.dart';
 import 'package:ejercicio/sesion6/screen/tarea6_screen.dart';
 import 'package:ejercicio/sesion7/screen/tarea7_screen.dart';
+import 'package:ejercicio/sesion8/screen/home8_screen.dart';
 import 'package:flutter/material.dart';
 
 class Menu extends StatelessWidget {
@@ -20,6 +21,7 @@ class Menu extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(8),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             ButtonWidget(
               text: 'Sesión 3', 
@@ -49,6 +51,12 @@ class Menu extends StatelessWidget {
               text: 'Sesión 7', 
               onPressed: () => {
                 Navigator.push( context, MaterialPageRoute( builder: (context) => const Tarea7Screen()))
+              }
+            ),
+            ButtonWidget(
+              text: 'Sesión 8', 
+              onPressed: () => {
+                Navigator.push( context, MaterialPageRoute( builder: (context) => const Home8Screen()))
               }
             ),
           ],
